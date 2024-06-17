@@ -1,11 +1,11 @@
 import {NextResponse} from "next/server";
-
-// TODO: Implement the route
+import {getAllWeapons} from "@lib/Weapons";
 
 // Returns data for all weapons
 
 export async function GET(request) {
+    const weapons = getAllWeapons();
     return NextResponse.json({
-        message: "Not Implemented"
-    }, {status: 501});
+        weapons: weapons
+    }, {status: 200});
 }
