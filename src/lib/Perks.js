@@ -8,3 +8,7 @@ export function getPerk(perk_id) {
     }
     return null;
 }
+
+export function getAllPerks() {
+    return Perks;
+}
