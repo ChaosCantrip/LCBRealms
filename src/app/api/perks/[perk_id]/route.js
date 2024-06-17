@@ -7,9 +7,7 @@ export async function GET(request, {params}) {
     const perk_id = params.perk_id.toLowerCase();
     const perk = getPerk(perk_id);
     if (perk) {
-        return NextResponse.json({
-            perk: perk
-        }, {status: 200});
+        return NextResponse.json(perk, {status: 200});
     } else {
         return NextResponse.json({
             message: `Perk with id ${perk_id} not found.`
