@@ -9,3 +9,7 @@ export function getWeapon(weapon_id) {
     }
     return null;
 }
+
+export function getAllWeapons() {
+    return Weapons;
+}
