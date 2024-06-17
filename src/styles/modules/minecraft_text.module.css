@@ -1,0 +1,143 @@
+.black {
+    color: #000000;
+}
+
+.black.shadow {
+    text-shadow: 3px 3px #000000;
+}
+
+.dark_blue {
+    color: #0000AA;
+}
+
+.dark_blue.shadow {
+    text-shadow: 3px 3px #00002A;
+}
+
+.dark_green {
+    color: #00AA00;
+}
+
+.dark_green.shadow {
+    text-shadow: 3px 3px #002A00;
+}
+
+.dark_aqua {
+    color: #00AAAA;
+}
+
+.dark_aqua.shadow {
+    text-shadow: 3px 3px #002A2A;
+}
+
+.dark_red {
+    color: #AA0000;
+}
+
+.dark_red.shadow {
+    text-shadow: 3px 3px #2A0000;
+}
+
+.dark_purple {
+    color: #AA00AA;
+}
+
+.dark_purple.shadow {
+    text-shadow: 3px 3px #2A002A;
+}
+
+.gold {
+    color: #FFAA00;
+}
+
+.gold.shadow {
+    text-shadow: 3px 3px #2A2A00;
+}
+
+.gray {
+    color: #AAAAAA;
+}
+
+.gray.shadow {
+    text-shadow: 3px 3px #2A2A2A;
+}
+
+.dark_gray {
+    color: #555555;
+}
+
+.dark_gray.shadow {
+    text-shadow: 3px 3px #151515;
+}
+
+.blue {
+    color: #5555FF;
+}
+
+.blue.shadow {
+    text-shadow: 3px 3px #15153F;
+}
+
+.green {
+    color: #55FF55;
+}
+
+.green.shadow {
+    text-shadow: 3px 3px #153F15;
+}
+
+.aqua {
+    color: #55FFFF;
+}
+
+.aqua.shadow {
+    text-shadow: 3px 3px #153F3F;
+}
+
+.red {
+    color: #FF5555;
+}
+
+.red.shadow {
+    text-shadow: 3px 3px #3F1515;
+}
+
+.light_purple {
+    color: #FF55FF;
+}
+
+.light_purple.shadow {
+    text-shadow: 3px 3px #3F153F;
+}
+
+.yellow {
+    color: #FFFF55;
+}
+
+.yellow.shadow {
+    text-shadow: 3px 3px #3F3F15;
+}
+
+.white {
+    color: #FFFFFF;
+}
+
+.white.shadow {
+    text-shadow: 3px 3px #3F3F3F;
+}
+
+.bold {
+    font-weight: bold;
+}
+
+.strikethrough {
+    text-decoration: line-through;
+}
+
+.underline {
+    text-decoration: underline;
+}
+
+.italic {
+    font-style: italic;
+}
