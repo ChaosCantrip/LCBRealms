@@ -1,11 +1,11 @@
 import {NextResponse} from "next/server";
-
-// TODO: Implement the route
+import {getAllPerks} from "@lib/Perks";
 
 // Returns data for all perks
 
 export async function GET(request) {
+    const perks = getAllPerks();
     return NextResponse.json({
-        message: "Not Implemented"
-    }, {status: 501});
+        perks: perks
+    }, {status: 200});
 }
