@@ -5,7 +5,5 @@ import {getAllPerks} from "@lib/Perks";
 
 export async function GET(request) {
     const perks = getAllPerks();
-    return NextResponse.json({
-        perks: perks
-    }, {status: 200});
+    return NextResponse.json(perks, {status: 200});
 }

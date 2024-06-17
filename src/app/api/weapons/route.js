@@ -5,7 +5,5 @@ import {getAllWeapons} from "@lib/Weapons";
 
 export async function GET(request) {
     const weapons = getAllWeapons();
-    return NextResponse.json({
-        weapons: weapons
-    }, {status: 200});
+    return NextResponse.json(weapons, {status: 200});
 }
