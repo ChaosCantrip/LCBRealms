@@ -5,15 +5,15 @@ export const Weapons = [
         "type": "Hand Cannon",
         "rarity": "Legendary",
         "perks": {
-            "1": [
+            "Column 1": [
                 "test_perk_1",
                 "test_perk_2"
             ],
-            "2": [
+            "Column 2": [
                 "test_perk_3",
                 "test_perk_4"
             ],
-            "origin": [
+            "Origin Trait": [
                 "test_origin_1"
             ]
         }
