@@ -1,0 +1,10 @@
+.perks_wrapper {
+    display: flex;
+    gap: 2rem;
+}
+
+.perks_column {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
