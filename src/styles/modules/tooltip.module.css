@@ -2,11 +2,6 @@
     position: relative;
     background-color: #100010;
     background-color: rgba(16,0,16,0.94);
-    padding: 1rem;
-    font-size: 16px;
-    line-height: 1.25em;
-    margin: 0.125em 0.25em;
-    z-index: 9999;
 }
 .format-f, .tooltip {
     color: #FFF;
