@@ -1,0 +1,29 @@
+.header {
+    padding: 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    background-color: var(--mc-dark-gray);
+}
+
+.title {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: var(--mc-gold);
+    text-shadow: var(--mc-gold-shadow);
+}
+
+.nav {
+    display: flex;
+    gap: 1rem;
+}
+
+.nav_button {
+    padding: 0.5rem 1rem;
+    text-decoration: none;
+}
+
+.nav_button:hover {
+    color: var(--mc-aqua);
+}
