@@ -19,3 +19,7 @@ main {
     flex: 1;
     width: 80%;
 }
+
+a {
+    text-decoration: none;
+}
