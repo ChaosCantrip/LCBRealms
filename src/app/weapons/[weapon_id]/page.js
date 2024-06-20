@@ -4,14 +4,13 @@ import minecraft from "@styles/modules/minecraft_text.module.css";
 import styles from "./custom.module.css";
 import tooltip from "@styles/modules/tooltip.module.css";
 import {notFound} from "next/navigation";
+import {getWeapon} from "@lib/Weapons";
 
 export default async function WeaponPage({ params }) {
-    const weapon_id = params.weapon_id;
-    const weapon_response = await fetch(process.env.URL + '/api/weapons/' + weapon_id);
-    if (!weapon_response.ok) {
-        notFound();
+    const weapon = getWeapon(params.weapon_id);
+    if (!weapon) {
+        return notFound();
     }
-    const weapon = await weapon_response.json();
     return (
         <div>
             <h1 className={`${minecraft.bold} ${minecraft.white} ${minecraft.shadow}`}>{weapon.name}</h1>

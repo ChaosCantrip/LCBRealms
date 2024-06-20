@@ -1,8 +1,8 @@
 import Link from "next/link";
+import {getAllWeapons} from "@lib/Weapons";
 
 export default async function WeaponsPage() {
-    const weapons_response = await fetch(process.env.URL + '/api/weapons');
-    const weapons = await weapons_response.json();
+    const weapons = getAllWeapons();
     return (
         <div>
             <h1>Weapons</h1>
