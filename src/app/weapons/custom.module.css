@@ -1,0 +1,23 @@
+.list {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.weapon {
+    padding: 0.5rem 1rem;
+}
+
+.weapon_name {
+    font-size: 1.5rem;
+    color: var(--mc-gold);
+    text-shadow: var(--mc-gold-shadow);
+}
+
+.weapon_subtitle {
+    color: var(--mc-dark-purple);
+}
+
+.weapon:hover .weapon_name {
+    color: var(--mc-aqua);
+}
