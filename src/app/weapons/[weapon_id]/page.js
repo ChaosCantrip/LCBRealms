@@ -1,10 +1,9 @@
-import {Suspense} from "react";
-
 import minecraft from "@styles/modules/minecraft_text.module.css";
 import styles from "./custom.module.css";
 import tooltip from "@styles/modules/tooltip.module.css";
 import {notFound} from "next/navigation";
 import {getWeapon} from "@lib/Weapons";
+import {getPerk} from "@lib/Perks";
 
 export default async function WeaponPage({ params }) {
     const weapon = getWeapon(params.weapon_id);
@@ -21,9 +20,7 @@ export default async function WeaponPage({ params }) {
                     <div key={column} className={styles.perks_column}>
                         <h3 className={styles.column_name}>{column}</h3>
                         {perks.map(perk_id => (
-                            <Suspense key={perk_id} fallback={<LoadingPerk perk_id={perk_id} />}>
-                                <Perk perk_id={perk_id} />
-                            </Suspense>
+                            <Perk key={perk_id} perk_id={perk_id} />
                         ))}
                     </div>
                 ))}
@@ -33,8 +30,8 @@ export default async function WeaponPage({ params }) {
 }
 
 async function Perk({perk_id}) {
-    const perk_response = await fetch(process.env.URL + '/api/perks/' + perk_id);
-    if (!perk_response.ok) {
+    const perk = getPerk(perk_id);
+    if (!perk) {
         return (
             <div className={`${styles.perk} ${tooltip.tooltip}`}>
                 <h4 className={`${minecraft.bold} ${minecraft.dark_red} ${minecraft.shadow}`}>Unknown Perk</h4>
@@ -43,20 +40,10 @@ async function Perk({perk_id}) {
         );
     }
 
-    const perk = await perk_response.json();
     return (
         <div className={`${styles.perk} ${tooltip.tooltip}`}>
             <h4 className={`${minecraft.bold} ${minecraft.dark_red} ${minecraft.shadow}`}>{perk.name}</h4>
             <p className={minecraft.gray}>{perk.description}</p>
-        </div>
-    );
-}
-
-function LoadingPerk({perk_id}) {
-    return (
-        <div className={styles.perk}>
-            <h4>Loading...</h4>
-            <p>{perk_id}</p>
         </div>
     );
 }
